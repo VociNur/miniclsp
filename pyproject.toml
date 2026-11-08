@@ -1,0 +1,35 @@
+[project]
+name = "my-antlr4-lsp"
+version = "0.1.0"
+requires-python = ">=3.10"
+dependencies = [
+    "antlr4-python3-runtime==4.13.2",
+    "pygls",
+]
+
+[tool.basedpyright]
+ignore = ["**/node_modules", "**/__pycache__", ".venv", "**/MyAntlrGrammar*.py"]
+extraPaths = ["grammar", "checking", "errors"]
+typeCheckingMode = "standard"
+reportMissingModuleSource = false
+reportWildcardImportFromLibrary = false
+reportImplicitOverride = false
+reportUnknownParameterType = false
+reportMissingParameterType = false
+reportUnknownArgumentType = false
+reportUnusedImport = false
+reportArgumentType = false
+reportOptionalMemberAccess = false
+reportOptionalCall = false
+reportOptionalIterable = false
+reportOptionalSubscript = false
+reportOptionalOperand = false
+
+[tool.ruff.lint]
+extend-ignore = ["N999"]
+extend-exclude = [
+    "**/MyAntlrGrammar*.py",   # code généré par ANTLR
+    ".venv",
+    "site-packages",
+]
+force-exclude = true
