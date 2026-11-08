@@ -13,7 +13,7 @@ make install
 Then add this lsp to your IDE.
 
 ### Add lsp to Helix IDE.
-Edit your ~/.config/helix/languages.toml in adding (this code add also the grammar of c for coloration)
+Edit your ~/.config/helix/languages.toml in adding (this code also add the grammar of c for coloration)
 
 ```
 [language-server.minic-lsp]
